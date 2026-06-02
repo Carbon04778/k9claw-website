@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --brand: #837262;
+  --brand-light: #a89888;
+  --brand-dark: #5c5045;
+  --brand-muted: #f5f2ef;
+  --brand-accent: #c4a882;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply text-black bg-white antialiased;
+  font-feature-settings: "kern" 1, "liga" 1;
+}
+
+/* Utility: fade-up animation helper */
+.animate-delay-100 { animation-delay: 100ms; }
+.animate-delay-200 { animation-delay: 200ms; }
+.animate-delay-300 { animation-delay: 300ms; }
+.animate-delay-400 { animation-delay: 400ms; }
+.animate-delay-500 { animation-delay: 500ms; }
+
+/* Smooth underline hover links */
+.nav-link {
+  @apply relative text-sm font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-black;
+}
+.nav-link::after {
+  content: '';
+  @apply absolute -bottom-0.5 left-0 h-px w-0 bg-brand transition-all duration-300;
+}
+.nav-link:hover::after {
+  @apply w-full;
+}
+
+/* Section spacing consistency */
+.section-py {
+  @apply py-16 md:py-24 lg:py-32;
+}
+
+/* Button base */
+.btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-full bg-brand px-6 py-3 text-sm font-semibold text-white tracking-wide transition-all duration-200 hover:bg-brand-dark hover:shadow-lg active:scale-95;
+}
+.btn-outline {
+  @apply inline-flex items-center justify-center gap-2 rounded-full border border-brand px-6 py-3 text-sm font-semibold text-brand tracking-wide transition-all duration-200 hover:bg-brand hover:text-white active:scale-95;
+}
+
+/* Card */
+.card {
+  @apply rounded-2xl bg-white border border-gray-100 shadow-sm p-6 transition-shadow duration-200 hover:shadow-md;
+}
+
+/* Divider */
+.divider {
+  @apply h-px w-full bg-gray-100;
+}
