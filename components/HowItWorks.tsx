@@ -5,13 +5,13 @@ const steps = [
     number: "01",
     title: "Extend the K9 Claw",
     description:
-      "Pull the telescoping handle to your preferred height. No bending required — the K9 Claw reaches the ground comfortably from a standing position.",
+      "Press the button to reveal the claw and bag. Feed the bag around the claw and then press the button again to fully extend the handle.",
   },
   {
     number: "02",
     title: "Feed the Bag Through",
     description:
-      "Insert a standard waste bag through the top of the device. The bag opens automatically around the scoop head, ready for collection.",
+      "The waste bag is fed through the hole in the bag holder compartment under the claw. Simply open it up and stretch it around the claw. The sticky adhesive tips on each claw's end hold the bag open and in place.",
   },
   {
     number: "03",
@@ -23,7 +23,7 @@ const steps = [
     number: "04",
     title: "Retract & Dispose",
     description:
-      "Press again to retract the head, sealing the bag automatically. Remove the sealed bag and dispose — clean, quick, and hands-free.",
+      "Press again to retract the handle with the claw clutching the feces inside the bag. Once fully retracted tie the bag off and toss the feces in the garbage.",
   },
 ];
 
