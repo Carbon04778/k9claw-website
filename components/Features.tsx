@@ -8,9 +8,9 @@ const features = [
       "The electric motor handles the scooping action automatically. Simply position, press, and the K9 Claw does the rest.",
   },
   {
-    label: "3-Stage Collapsible Design",
+    label: "5-Stage Collapsible Design",
     description:
-      "Goes from fully closed to ready-to-use in seconds. Three stages: closed, open, and extended for maximum reach.",
+      "Goes from fully closed to ready-to-use in seconds. Five stages for a completely clean and hands-free experience.",
   },
   {
     label: "Universal Bag Compatibility",
@@ -24,10 +24,19 @@ const features = [
   },
 ];
 
+const stages = [
+  { number: "01", label: "Full Closed" },
+  { number: "02", label: "Open Stage 1" },
+  { number: "03", label: "Open with Bag" },
+  { number: "04", label: "Extended with Bag" },
+  { number: "05", label: "Closing after Bag is removed" },
+];
+
 export default function Features() {
   return (
     <section className="section-py bg-brand-muted/40" id="features">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
         {/* Header */}
         <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
           <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-3">
@@ -63,8 +72,8 @@ export default function Features() {
               Cleanup Made Simple — No Bending, No Touching
             </h3>
             <p className="text-gray-500 leading-relaxed mb-8">
-              The K9 Claw extends to a comfortable standing height so you maintain your posture 
-              while picking up after your dog. The motorized head positions the bag, collects waste, 
+              The K9 Claw extends to a comfortable standing height so you maintain your posture
+              while picking up after your dog. The motorized head positions the bag, collects waste,
               and retracts — all without you touching anything.
             </p>
             <ul className="space-y-4">
@@ -83,7 +92,7 @@ export default function Features() {
               ))}
             </ul>
             <div className="mt-8">
-              <a
+              
                 href={siteConfig.shopifyUrl}
                 target="_blank"
                 rel="noopener noreferrer"
@@ -114,25 +123,34 @@ export default function Features() {
               Smart Design
             </span>
             <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 leading-tight mb-6">
-              Three Stages. One Seamless Experience.
+              Five Stages. One Seamless Experience.
             </h3>
             <p className="text-gray-500 leading-relaxed mb-6">
-              The K9 Claw operates in three intuitive stages: fully closed for transport, 
-              open stage for bag loading, and extended for pickup. The retractable head 
-              seals the bag automatically for a completely clean experience.
+              The K9 Claw operates in five intuitive stages: fully closed for transport,
+              open stage for bag loading, open with bag, extended with bag for pickup, and
+              closing after bag is removed. Completely clean every single time.
             </p>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
-              {["Full Closed", "Open Stage 1", "Extended Stage 2"].map((stage, i) => (
-                <div key={i} className="text-center p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
+
+            {/* 5 Stage Cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-6">
+              {stages.map((stage, i) => (
+                <div
+                  key={i}
+                  className="text-center p-4 rounded-xl bg-white border border-gray-100 shadow-sm"
+                >
                   <div className="text-2xl font-display font-bold text-brand mb-1">
-                    0{i + 1}
+                    {stage.number}
                   </div>
-                  <div className="text-xs font-semibold text-gray-700">{stage}</div>
+                  <div className="text-xs font-semibold text-gray-700 leading-snug">
+                    {stage.label}
+                  </div>
                 </div>
               ))}
             </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );
