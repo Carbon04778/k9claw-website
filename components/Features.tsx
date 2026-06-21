@@ -107,6 +107,7 @@ export default function Features() {
                     src={stage.image}
                     alt={`K9 Claw stage ${stage.number}: ${stage.label}`}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
                     className="object-cover"
                   />
                 </div>

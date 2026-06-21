@@ -4,6 +4,7 @@ import VideoBanner from "@/components/VideoBanner";
 import Benefits from "@/components/Benefits";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
+import LifestyleBanner from "@/components/LifestyleBanner";
 import FAQ from "@/components/FAQ";
 import CTASection from "@/components/CTASection";
 import { siteConfig } from "@/config/site";
@@ -21,6 +22,7 @@ export default function HomePage() {
       <Benefits />
       <Features />
       <HowItWorks />
+      <LifestyleBanner />
       <FAQ />
       <CTASection />
     </>
