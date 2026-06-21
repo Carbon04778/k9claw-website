@@ -9,33 +9,55 @@ const features = [
 ];
 
 const stages = [
-  { number: "01", label: "Full Closed" },
-  { number: "02", label: "Open Stage 1" },
-  { number: "03", label: "Open with Bag" },
-  { number: "04", label: "Extended with Bag" },
-  { number: "05", label: "Closing after Bag is removed" },
+  { number: "01", label: "Full Closed", image: "/stage-1.jpg" },
+  { number: "02", label: "Open Stage 1", image: "/stage-2.jpg" },
+  { number: "03", label: "Open with Bag", image: "/stage-3.jpg" },
+  { number: "04", label: "Extended with Bag", image: "/stage-4.jpg" },
+  { number: "05", label: "Closing after Bag is removed", image: "/stage-5.jpg" },
 ];
 
 export default function Features() {
   return (
     <section className="section-py bg-brand-muted/40" id="features">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
         <div className="text-center max-w-2xl mx-auto mb-14 md:mb-20">
-          <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-3">Product Features</span>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 leading-tight mb-4">Engineered for Every Walk</h2>
-          <p className="text-base md:text-lg text-gray-500 leading-relaxed">Premium materials, thoughtful mechanics, and intuitive design come together in one tool.</p>
+          <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-3">
+            Product Features
+          </span>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-gray-900 leading-tight mb-4">
+            Engineered for Every Walk
+          </h2>
+          <p className="text-base md:text-lg text-gray-500 leading-relaxed">
+            Premium materials, thoughtful mechanics, and intuitive design come together in one tool.
+          </p>
         </div>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center mb-20 md:mb-28">
           <div className="relative">
             <div className="absolute inset-0 rounded-3xl bg-brand/10 blur-2xl scale-95" />
             <div className="relative rounded-3xl overflow-hidden shadow-xl border border-brand/10">
-              <Image src="/product-1.jpg" alt="K9 Claw in use with dog" width={600} height={480} className="w-full h-auto object-cover" />
+              <Image
+                src="/product-1.jpg"
+                alt="K9 Claw in use with dog"
+                width={600}
+                height={480}
+                className="w-full h-auto object-cover"
+              />
             </div>
           </div>
           <div>
-            <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-4">In Action</span>
-            <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 leading-tight mb-6">Cleanup Made Simple - No Bending, No Touching</h3>
-            <p className="text-gray-500 leading-relaxed mb-8">The K9 Claw extends to a comfortable standing height so you maintain your posture while picking up after your dog. The motorized head positions the bag, collects waste, and retracts - all without you touching anything.</p>
+            <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-4">
+              In Action
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 leading-tight mb-6">
+              Cleanup Made Simple — No Bending, No Touching
+            </h3>
+            <p className="text-gray-500 leading-relaxed mb-8">
+              The K9 Claw extends to a comfortable standing height so you maintain your posture
+              while picking up after your dog. The motorized head positions the bag, collects waste,
+              and retracts — all without you touching anything.
+            </p>
             <ul className="space-y-4">
               {features.map((f, i) => (
                 <li key={i} className="flex items-start gap-3">
@@ -52,31 +74,55 @@ export default function Features() {
               ))}
             </ul>
             <div className="mt-8">
-              <a href={siteConfig.shopifyUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">Order Now</a>
+              <a href={siteConfig.shopifyUrl} target="_blank" rel="noopener noreferrer" className="btn-primary">
+                Order Now
+              </a>
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <div className="lg:order-2 relative">
-            <div className="absolute inset-0 rounded-3xl bg-brand/10 blur-2xl scale-95" />
-            <div className="relative rounded-3xl overflow-hidden shadow-xl border border-brand/10">
-              <Image src="/product-2.jpg" alt="K9 Claw stages diagram" width={600} height={480} className="w-full h-auto object-cover" />
-            </div>
+
+        <div className="w-full">
+          <div className="text-center max-w-2xl mx-auto mb-10 md:mb-12">
+            <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-4">
+              Smart Design
+            </span>
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-display font-bold text-gray-900 leading-tight mb-6">
+              Five Stages. One Seamless Experience.
+            </h3>
+            <p className="text-gray-500 leading-relaxed">
+              The K9 Claw operates in five intuitive stages: fully closed for transport,
+              open stage for bag loading, open with bag, extended with bag for pickup, and
+              closing after bag is removed. Completely clean every single time.
+            </p>
           </div>
-          <div className="lg:order-1">
-            <span className="inline-block text-xs font-semibold text-brand uppercase tracking-widest mb-4">Smart Design</span>
-            <h3 className="text-2xl sm:text-3xl font-display font-bold text-gray-900 leading-tight mb-6">Five Stages. One Seamless Experience.</h3>
-            <p className="text-gray-500 leading-relaxed mb-6">The K9 Claw operates in five intuitive stages: fully closed for transport, open stage for bag loading, open with bag, extended with bag for pickup, and closing after bag is removed. Completely clean every single time.</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-6">
-              {stages.map((stage, i) => (
-                <div key={i} className="text-center p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
-                  <div className="text-2xl font-display font-bold text-brand mb-1">{stage.number}</div>
-                  <div className="text-xs font-semibold text-gray-700 leading-snug">{stage.label}</div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            {stages.map((stage, i) => (
+              <div
+                key={i}
+                className="flex flex-col rounded-2xl bg-white border border-gray-100 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
+              >
+                <div className="relative w-full aspect-square bg-gray-100 border-b border-gray-100">
+                  <Image
+                    src={stage.image}
+                    alt={`K9 Claw stage ${stage.number}: ${stage.label}`}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
-              ))}
-            </div>
+                <div className="text-center p-4">
+                  <div className="text-2xl font-display font-bold text-brand mb-1">
+                    {stage.number}
+                  </div>
+                  <div className="text-xs font-semibold text-gray-700 leading-snug">
+                    {stage.label}
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
+
       </div>
     </section>
   );

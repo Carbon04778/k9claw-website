@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Hero from "@/components/Hero";
+import VideoBanner from "@/components/VideoBanner";
 import Benefits from "@/components/Benefits";
 import Features from "@/components/Features";
 import HowItWorks from "@/components/HowItWorks";
@@ -16,6 +17,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
+      <VideoBanner />
       <Benefits />
       <Features />
       <HowItWorks />
